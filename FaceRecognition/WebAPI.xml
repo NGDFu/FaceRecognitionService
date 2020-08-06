@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FaceRecognition</name>
+    </assembly>
+    <members>
+        <member name="M:FaceRecognition.Controllers.FaceRecognitionController.Add(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            人脸图片入库
+            </summary>
+            <param name="file">图片二进制内容</param>
+            <returns>人脸特征ID</returns>
+        </member>
+        <member name="M:FaceRecognition.Controllers.FaceRecognitionController.Add(System.Single[])">
+            <summary>
+            人脸图片入库，前端取人脸特征
+            </summary>
+            <param name="feature">人脸特征</param>
+            <returns>人脸特征ID</returns>
+        </member>
+        <member name="M:FaceRecognition.Controllers.FaceRecognitionController.MatchAsync(Microsoft.AspNetCore.Http.IFormFile)">
+            <summary>
+            人脸匹配
+            </summary>
+            <param name="file">图片二进制内容</param>
+            <returns>匹配上的人脸特征ID，对应的测试图片下载链接</returns>
+        </member>
+        <member name="M:FaceRecognition.Controllers.FaceRecognitionController.MatchAsync(System.Single[])">
+            <summary>
+            人脸匹配
+            </summary>
+            <param name="feature">人脸特征</param>
+            <returns>匹配上的人脸特征ID，对应的测试图片下载链接</returns>
+        </member>
+        <member name="M:FaceRecognition.Controllers.FaceRecognitionController.GetFileAsync(System.String)">
+            <summary>
+            测试使用，仅用于传图片情景。下载图片
+            </summary>
+            <param name="fileName">图片名</param>
+            <returns></returns>
+        </member>
+        <member name="P:FaceRecognition.Services.ServiceOption.ModelPath">
+            <summary>
+            人脸识别模型目录
+            </summary>
+        </member>
+        <member name="P:FaceRecognition.Services.ServiceOption.DBName">
+            <summary>
+            保存人脸信息的路径(LevelDB使用本地存储)
+            </summary>
+        </member>
+        <member name="P:FaceRecognition.Services.ServiceOption.FeaturePath">
+            <summary>
+            人脸特征存储文件路径
+            </summary>
+        </member>
+        <member name="P:FaceRecognition.Services.ServiceOption.ImageSavePath">
+            <summary>
+            如果是传图片过来，那么图片保存路径
+            </summary>
+        </member>
+    </members>
+</doc>
